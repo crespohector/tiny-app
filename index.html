@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tiny Apps</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/#home">home</a>
+        <a href="/#note-app">Tiny Notes</a>
+    </nav>
+    <main>
+        <div id="home" class="title-container">
+            <h1>Tiny Apps</h1>
+            <div class="message">Welcome to the ultimate <small>tiny</small> app experience!</div>
+        </div>
+        <div id="note-app" class="note-app-container">
+            <h1>Tiny Notes</h1>
+            <div class="notes-wrapper">
+                <div class="notes" data-notes-id="0">Your notes will go here!
+                    <div class="delete-note">X</div>
+                </div>
+            </div>
+            <textarea placeholder="Input notes here..."></textarea>
+            <button type="button">Submit</button>
+        </div>
+    </main>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>

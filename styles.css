@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Montserrat, monospace, sans-serif;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+nav {
+    max-width: 800px;
+    margin: 0px auto;
+    background-color: #24252a;
+    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.41);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+nav > a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    margin: 0px 20px;
+    position: sticky;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.053);
+    max-width: 800px;
+    margin: 0px auto;
+}
+
+.title-container {
+    text-align: center;
+    position: relative;
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-container > h1::before {
+    content: "🤏";
+    font-size: 5em;
+    position: absolute;
+    top: 34.6%;
+    left: 26.5%;
+    z-index: -1;
+}
+
+.message {
+    margin-top: 80px;
+    font-size: 1.3em;
+    text-transform: capitalize;
+}
+
+small {
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    .title-container > h1::before {
+        content: "";
+    }
+}
+
+/*------------ Tiny Notes App CSS Styling --------------- */
+
+.note-app-container {
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.notes-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+    background-color: #ececec8c;
+}
+
+.notes {
+    padding: 10px;
+    overflow-wrap: anywhere;
+    border-radius: 4px;
+    height: 200px;
+    width: 200px;
+    border: 1px solid #b5b3b3;
+    margin: 0px 20px 20px 40px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.notes:nth-child(even) {
+    background-color: #d6d8f9;
+}
+
+.notes:nth-child(odd) {
+    background-color: #e9e1f9;
+}
+
+.note-app-container textarea {
+    padding: 15px 10px;
+    margin: 30px 0px;
+    resize: none;
+    width: 80%;
+    border: 1px solid #c1c1c1;
+    border-radius: 4px;
+}
+
+.note-app-container button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #8c98ff;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.note-app-container button:active {
+    transform: scale(.98);
+}
+
+.delete-note {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #f44747;
+    font-weight: bold;
+    cursor: pointer;
+}
